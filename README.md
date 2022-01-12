@@ -1,1 +1,1 @@
-# Exercicios do TechDive utilizando Openjdk17
+# Exercicios do TechDive utilizando OpenJDK 17
