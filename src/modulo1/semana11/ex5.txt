@@ -1,0 +1,3 @@
+SELECT * FROM Aluno 
+FULL OUTER JOIN	Endereco ON fk_aluno_id = aluno.id
+WHERE nome LIKE '%a%';

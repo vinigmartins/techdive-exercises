@@ -1,0 +1,24 @@
+SELECT
+	Aluno.nome,
+	Aluno.Fone,
+	Aluno.Cpf,
+	Aluno.Dtnasc,
+	Aluno.Sexo,
+	Endereco.Rua,
+	Endereco.Numero,
+	Endereco.Bairro,
+	Endereco.Cidade,
+	Endereco.Estado,
+	Endereco.Outros,
+	Curso.nome,
+	Curso.Semestre,
+	Professor.nome,
+	Professor.Graduacao,
+	Professor.Fone
+FROM
+	Disciplina
+INNER JOIN Curso ON Disciplina.fk_curso_id = Curso.id
+INNER JOIN Professor ON Disciplina.fk_Professor_id = Professor.id
+INNER JOIN Matricula ON Matricula.fk_curso_id = Curso.id
+INNER JOIN Aluno ON Matricula.fk_aluno_id = Aluno.id
+INNER JOIN Endereco ON Endereco.fk_aluno_id = Aluno.id

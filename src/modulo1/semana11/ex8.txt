@@ -1,0 +1,8 @@
+SELECT
+	Aluno.Nome,
+	Endereco.*
+FROM 
+	Aluno
+LEFT JOIN Endereco ON fk_aluno_id = aluno.id
+ORDER BY
+	Aluno.nome ASC;

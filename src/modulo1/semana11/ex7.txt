@@ -1,0 +1,22 @@
+CREATE TABLE Disciplina (
+    Id INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    fk_Curso_Id INTEGER,
+    fk_Professor_Id INTEGER
+);
+ 
+ALTER TABLE Disciplina ADD CONSTRAINT FK_Disciplina_Curso
+    FOREIGN KEY (fk_Curso_Id)
+    REFERENCES Curso (Id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Disciplina ADD CONSTRAINT FK_Disciplina_Professor
+    FOREIGN KEY (fk_Professor_Id)
+    REFERENCES Professor (Id)
+    ON DELETE RESTRICT;
+
+INSERT INTO Disciplina (nome, fk_curso_id, fk_professor_id) VALUES ('Lambda', 1, 2);
+INSERT INTO Disciplina (nome, fk_curso_id, fk_professor_id) VALUES ('Versionamento', 3, 3);
+INSERT INTO Disciplina (nome, fk_curso_id, fk_professor_id) VALUES ('Postgres', 2, 1);
+INSERT INTO Disciplina (nome, fk_curso_id, fk_professor_id) VALUES ('Estrutura de dados', 4, 5);
+INSERT INTO Disciplina (nome, fk_curso_id, fk_professor_id) VALUES ('Web', 5, 4);

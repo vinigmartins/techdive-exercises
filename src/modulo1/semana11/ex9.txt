@@ -1,0 +1,10 @@
+SELECT
+	Curso.nome,
+	Curso.Semestre,
+	Professor.nome,
+	Professor.Graduacao,
+	Professor.Fone
+FROM
+	Disciplina
+INNER JOIN Curso ON Disciplina.fk_curso_id = Curso.id
+INNER JOIN Professor ON Disciplina.fk_Professor_id = Professor.id

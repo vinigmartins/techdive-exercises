@@ -1,0 +1,37 @@
+CREATE TABLE Aluno (
+    Id INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    Cpf VARCHAR,
+    DtNasc DATE,
+    Sexo VARCHAR,
+    Fone VARCHAR
+);
+
+CREATE TABLE Endereco (
+    Id INTEGER PRIMARY KEY,
+    Rua VARCHAR,
+    Numero INTEGER,
+    Bairro VARCHAR,
+    Cidade VARCHAR,
+    Estado VARCHAR,
+    Outros VARCHAR,
+    fk_Aluno_Id INTEGER
+);
+ 
+ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco
+    FOREIGN KEY (fk_Aluno_Id)
+    REFERENCES Aluno (Id)
+    ON DELETE CASCADE;
+
+CREATE TABLE Curso (
+    Id INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    Semestre INTEGER
+);
+
+CREATE TABLE Professor (
+    Id INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    Graduacao VARCHAR,
+    Fone VARCHAR
+);

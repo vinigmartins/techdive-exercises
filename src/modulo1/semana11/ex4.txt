@@ -1,0 +1,28 @@
+INSERT INTO Aluno (nome, cpf, dtnasc, sexo, fone) VALUES ('Vinicius', '123456789-00', '03/19/1999', 'masculino', '991560079');
+INSERT INTO Aluno (nome, cpf, dtnasc, sexo, fone) VALUES ('Julia', '321456987-01', '01/12/1995', 'feminino', '998276159');
+INSERT INTO Aluno (nome, cpf, dtnasc, sexo, fone) VALUES ('Murilo', '987123654-02', '05/26/1995', 'masculino', '993786451');
+INSERT INTO Aluno (nome, cpf, dtnasc, sexo, fone) VALUES ('Eliseu', '654987123-03', '11/15/1988', 'masculino', '996485237');
+INSERT INTO Aluno (nome, cpf, dtnasc, sexo, fone) VALUES ('Karine', '789654123-04', '09/03/1979', 'feminino', '997431585');
+
+INSERT INTO Endereco (rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Imbituba', 315, 'Dom Bosco', 'Itajai', 'SC', 'Condominio', 1);
+INSERT INTO Endereco (rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Sergio rosa', 764, 'Espinheiros', 'Tubarao', 'SC', 'Perto da lanchonete', 3);
+INSERT INTO Endereco (rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Augusto reis', 58, 'Trindade', 'Florianopolis', 'SC', 'lado da farmacia popular', 4);
+INSERT INTO Endereco (rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Degelo constantino', 975, 'Aguas congeladas', 'Porto Alegre', 'RS', 'Frio', 5);
+INSERT INTO Endereco (rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Jose dos santos', 38, 'Sao vicente', 'Tubarao', 'SC', 'casa do meio', 6);
+
+INSERT INTO Curso (nome, semestre) VALUES ('Java', 1);
+INSERT INTO Curso (nome, semestre) VALUES ('SQL', 2);
+INSERT INTO Curso (nome, semestre) VALUES ('GIT', 3);
+INSERT INTO Curso (nome, semestre) VALUES ('C++', 4);
+INSERT INTO Curso (nome, semestre) VALUES ('Javascript', 5);
+
+INSERT INTO Professor (nome, graduacao, fone) VALUES ('Alessandra', 'Mestrado', '998654912');
+INSERT INTO Professor (nome, graduacao, fone) VALUES ('Joao', 'PHD', '999824437');
+INSERT INTO Professor (nome, graduacao, fone) VALUES ('Cesar', 'Doutor', '997221468');
+INSERT INTO Professor (nome, graduacao, fone) VALUES ('Elder', 'pos graduado', '984216679');
+INSERT INTO Professor (nome, graduacao, fone) VALUES ('Andre', 'Graduado', '991873376');

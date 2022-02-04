@@ -1,0 +1,23 @@
+CREATE TABLE Matricula (
+    Id INTEGER PRIMARY KEY,
+    Data_Matricula DATE,
+    fk_Aluno_Id INTEGER,
+    fk_Curso_Id INTEGER
+);
+ 
+ALTER TABLE Matricula ADD CONSTRAINT FK_Matricula_Aluno
+    FOREIGN KEY (fk_Aluno_Id)
+    REFERENCES Aluno (Id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Matricula ADD CONSTRAINT FK_Matricula_Curso
+    FOREIGN KEY (fk_Curso_Id)
+    REFERENCES Curso (Id)
+    ON DELETE SET NULL;
+
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('11/1/2021', '1', '1');
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('11/1/2021', '1', '4');
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('01/10/2022', '3', '2');
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('12/05/2021', '4', '3');
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('02/11/2022', '5', '5');
+INSERT INTO Matricula (data_matricula, fk_aluno_id, fk_curso_id) VALUES ('01/10/2022', '6', '3');
