@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+:root {
+    --text-color: #0b5345;
+    --border-bottom-color: #dddddd;
+    --border-color: #17202A;
+    --bg-color: #fdfefe;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #154360;
+    margin: 20px;
+}

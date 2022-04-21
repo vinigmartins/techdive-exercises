@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Lista de compras</title>
+    <h:outputStylesheet name = "css/styles.css" />
+</h:head>
+
+<h:body>
+    <h1>Lista de Compras</h1>
+
+    <h:form>
+        <h:outputLabel for="item" value="Item: "/>
+        <h:inputText id="item"
+                     value="#{listaBean.item.nome}"/>
+        <h:message for="item"/>
+
+        <h:outputLabel for="quantidade" value="Quantidade: "/>
+        <h:inputText id="quantidade"
+                     value="#{listaBean.item.quantidade}"
+                     required="true"
+                     converterMessage="O campo deve ser um numero"
+                     requiredMessage="O campo deve ser preenchido">
+            <f:validator validatorId="QuantidadeValidator"/>
+        </h:inputText>
+        <h:message for="quantidade"/>
+
+        <h:selectOneMenu id="medida" value="#{listaBean.item.medida}">
+            <f:selectItems value="#{listaBean.item.medidas}"/>
+        </h:selectOneMenu>
+
+        <h:commandButton value="+" action="#{listaBean.adicionarNaLista()}">
+        </h:commandButton>
+    </h:form>
+
+    <h:form>
+        <h:selectManyListbox value = "#{listaBean.itensSelecionados}">
+            <f:selectItems value="#{listaBean.lista}"/>
+        </h:selectManyListbox>
+
+        <h:commandButton value="-" action="#{listaBean.removerDaLista()}" />
+    </h:form>
+
+    <h:link value="Ir para pagina de impressao" outcome="impressao"/>
+
+</h:body>
+
+</html>
